@@ -1,15 +1,16 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Resources</title>
-  </head>
-  <body>
-    <p>
-      Welcome!
-    </p>
-
-    <p>
-      <%= @resources %>
-    </p>
-  </body>
-</html>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Context</th>
+      <th>Id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @resources.each do |r| %>
+      <tr>
+        <td> <%= r["@context"] %> </td>
+        <td> <%= r["@id"] %> </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
