@@ -7,5 +7,6 @@ require_relative 'controllers/resources_controller'
 # @description: Root point of the application.
 ###
 get '/' do
-  ResourcesController.index
+  @resources = ResourcesController.index
+  erb :resources
 end
